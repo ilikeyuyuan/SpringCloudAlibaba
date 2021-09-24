@@ -1,0 +1,28 @@
+### 导入商品
+POST http://127.0.0.1:9001/imooc/ecommerce-goods-service/async-goods/import-goods
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcIkltb29jUWlueWlAaW1vb2MuY29tXCJ9IiwianRpIjoiNjY2ZDhiOTUtY2UwMi00Nzg4LWE3Y2QtMDRlMTY2MDEzYmFhIiwiZXhwIjoxNjMyNDk5MjAwfQ.EFRwwN1z1blHgYfaYedVSYAml0RLVPa3xeUq39YCrBh1RNYqtB1kYluursMRGoyNrkdvMZAsJhttG4BGBBqKnk5ygZQZjD6BGLaV0Q78zYt5AzP9ugCakDWUkSCeEl6RHKP6ShEWPSpUqd8ccZyQrq3N9pmVn3EZefOHcpu3NQnCFFtsnshwEfYqzJphhAc73TwjTVD4EZaXsGBta1rU9-85tYKW9iQe4RnaxM5otbqtOIInU_UKUtfe4kOl97P76JN08Ke_EinREksEAX-dMg1omEska8bebLHG3CQObZihAGsv6L8OIjB-A1bhgNF12ZvXRCrrquTMQyTuVJi9Ug
+
+[
+  {
+    "goodsCategory": "10001",
+    "brandCategory": "20001",
+    "goodsName": "iphone 13",
+    "goodsPic": "",
+    "goodsDescription": "苹果手机",
+    "price": 150000,
+    "supply": 2000000,
+    "goodsProperty": {
+      "size": "12cm * 6.5cm",
+      "color": "金色",
+      "material": "金属机身",
+      "pattern": "纯色"
+    }
+  }
+]
+
+
+### 查询导入商品状态
+GET http://127.0.0.1:9001/imooc/ecommerce-goods-service/async-goods/task-info?taskId=81913e3d-c9d6-416f-a429-171772f409ac
+Accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidXNlcm5hbWVcIjpcIkltb29jUWlueWlAaW1vb2MuY29tXCJ9IiwianRpIjoiNjY2ZDhiOTUtY2UwMi00Nzg4LWE3Y2QtMDRlMTY2MDEzYmFhIiwiZXhwIjoxNjMyNDk5MjAwfQ.EFRwwN1z1blHgYfaYedVSYAml0RLVPa3xeUq39YCrBh1RNYqtB1kYluursMRGoyNrkdvMZAsJhttG4BGBBqKnk5ygZQZjD6BGLaV0Q78zYt5AzP9ugCakDWUkSCeEl6RHKP6ShEWPSpUqd8ccZyQrq3N9pmVn3EZefOHcpu3NQnCFFtsnshwEfYqzJphhAc73TwjTVD4EZaXsGBta1rU9-85tYKW9iQe4RnaxM5otbqtOIInU_UKUtfe4kOl97P76JN08Ke_EinREksEAX-dMg1omEska8bebLHG3CQObZihAGsv6L8OIjB-A1bhgNF12ZvXRCrrquTMQyTuVJi9Ug
