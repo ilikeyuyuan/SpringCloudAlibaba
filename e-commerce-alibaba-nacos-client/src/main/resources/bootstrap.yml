@@ -34,6 +34,20 @@ spring:
       probability: 1.0 #代表100%
       rate: 100 #每秒间隔接受的trace量，这个设置了上面就无效
 
+feign:
+  #feign开启gzip压缩
+  compression:
+    request:
+      enabled: true
+      min-request-size: 1024
+      mime-types: text/xml,application/xml,application/json
+    response:
+      enabled: true
+  # 禁用默认的http,启用 okhttp
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
 # 暴露端点
 management:
   endpoints:
